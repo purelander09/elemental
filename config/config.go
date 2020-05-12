@@ -12,7 +12,8 @@ type Config struct {
 		Port string `yaml:"port" env:"SRV_PORT,PORT" env-description:"Server port" env-default:"3333"`
 	}
 	Database struct {
-		Host string `yaml:"host" env:"DB_HOST" env-description:"Database host" env-default:"localhost"`
+		Url      string `yaml:"url" env:"DB_HOST" env-description:"Database host" env-default:"localhost"`
+		Username string `yaml:"username" env:"DB_USERNAME" env-description:"Database user name" env-default:"username"`
 	}
 }
 
